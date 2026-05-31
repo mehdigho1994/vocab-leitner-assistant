@@ -1,0 +1,6 @@
+Vocab Leitner Assistant privacy notes
+
+Data stored locally: saved vocabulary cards, Leitner box status, review dates, settings, and streak/activity dates.
+External requests: selected words/phrases are sent to dictionaryapi.dev for dictionary lookup and to api.mymemory.translated.net for translation only when the user opens dictionary/translation or reveals review details. Datamuse is used as a fallback dictionary provider.
+No ads, no analytics, no selling data, no browsing history collection.
+Stored data is removed if the user uninstalls the extension.

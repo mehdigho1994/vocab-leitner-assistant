@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Vocab Leitner</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header>
+    <div class="hero-row single-mascot-row">
+      <div class="hero-copy">
+        <span class="badge">Leitner Vocabulary</span>
+        <h1>Vocab Assistant</h1>
+        <p id="stats">Loading...</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="streak-card" id="streakCard">
+      <div class="streak-copy">
+        <b id="streakTitle">Loading streak...</b>
+        <p class="muted" id="streakText"></p>
+      </div>
+      <img id="streakMascot" src="assets/mascot-happy.svg" alt="Streak mascot" class="mascot mascot-card mascot-bounce" data-mood="happy" />
+      <div class="streak-number"><span id="streakDays">0</span><small>day streak</small></div>
+    </section>
+
+    <section class="goal-card">
+      <div>
+        <b>Daily learning goal</b>
+        <p class="muted"><span id="goalProgress">0</span></p>
+      </div>
+      <label>
+        <span>Words/day</span>
+        <input id="dailyGoal" type="number" min="1" max="200" />
+      </label>
+    </section>
+
+
+    <section class="settings-card theme-card">
+      <div>
+        <b>Visual theme</b>
+        <p class="muted">Use the new Chrome Web Store promo design or the original dark interface.</p>
+      </div>
+      <label class="interval-row">
+        <span>Theme</span>
+        <select id="visualTheme">
+          <option value="promo">Promo owl theme</option>
+          <option value="classic">Classic dark theme</option>
+        </select>
+      </label>
+    </section>
+
+    <section class="settings-card">
+      <div>
+        <b>Review mode</b>
+        <p class="muted">Manual review or active pop-up review while you browse.</p>
+      </div>
+      <label class="switch-row">
+        <span>Show review while browsing</span>
+        <input id="browseReviewEnabled" type="checkbox" />
+      </label>
+      <label class="interval-row">
+        <span>Check every</span>
+        <div class="number-control">
+          <input id="browseInterval" type="number" min="1" max="240" step="1" />
+          <small>min</small>
+        </div>
+      </label>
+      <input id="browseIntervalRange" class="range" type="range" min="1" max="120" step="1" />
+      <label class="interval-row">
+        <span>Words per browsing popup</span>
+        <div class="number-control">
+          <input id="browseBatchSize" type="number" min="1" max="50" step="1" />
+          <small>words</small>
+        </div>
+      </label>
+    </section>
+
+    <section class="settings-card">
+      <div>
+        <b>Translation</b>
+        <p class="muted">Adds a Translate button to the selected-word toolbar. Provider: MyMemory free API.</p>
+      </div>
+      <label class="interval-row">
+        <span>Translate to</span>
+        <select id="translationTarget"></select>
+      </label>
+      <p class="muted">Tip: Persian is selected by default. Free anonymous translation can have daily limits.</p>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>Leitner boxes</h2>
+        <button id="startReview">Review</button>
+      </div>
+      <div id="boxes" class="boxes"></div>
+      <div id="learned" class="learned"></div>
+    </section>
+
+    <section id="review" class="review-area"></section>
+
+    <section class="export-card">
+      <div>
+        <b>Word backup</b>
+        <p class="muted">Your full word list is hidden from the dashboard. Export it when you need an Excel file.</p>
+      </div>
+      <button id="exportWords">Export Excel CSV</button>
+    </section>
+  
+    <div id="reviewModal" class="review-modal hidden" role="dialog" aria-modal="true">
+      <div class="review-modal-card">
+        <div class="modal-head">
+          <div>
+            <span class="badge">Leitner Review</span>
+            <h2 id="modalTitle">Review</h2>
+          </div>
+          <button id="closeReview" class="modal-close">×</button>
+        </div>
+        <div id="modalBody"></div>
+      </div>
+    </div>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>

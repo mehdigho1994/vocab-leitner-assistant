@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" role="img" aria-label="Blinking motivated owl mascot">
+  <defs><linearGradient id="g" x1="25" y1="35" x2="190" y2="190" gradientUnits="userSpaceOnUse"><stop stop-color="#075BFF"/><stop offset="1" stop-color="#14B8A6"/></linearGradient><linearGradient id="f" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#F97316"/><stop offset="1" stop-color="#FACC15"/></linearGradient></defs>
+  <ellipse cx="110" cy="126" rx="72" ry="76" fill="url(#g)"/>
+  <ellipse cx="110" cy="137" rx="45" ry="50" fill="#F8FBFF"/>
+  <path d="M48 83c14-28 31-43 53-40l-18 35c-11 3-21 6-35 5Zm124 0c-14-28-31-43-53-40l18 35c11 3 21 6 35 5Z" fill="#0A3A88"/>
+  <circle cx="83" cy="107" r="28" fill="#fff"/><circle cx="137" cy="107" r="28" fill="#fff"/>
+  <path d="M70 107c12-13 25-13 38 0M122 107c12-13 25-13 38 0" stroke="#0B1B3A" stroke-width="7" stroke-linecap="round" fill="none"/>
+  <path d="M110 121l14 10-14 12-14-12 14-10Z" fill="#F97316"/>
+  <rect x="74" y="46" width="72" height="17" rx="3" fill="#0B1B3A" transform="rotate(-9 110 54)"/><path d="M112 18l56 22-55 20-58-20 57-22Z" fill="#0B1B3A"/><path d="M164 42v38" stroke="#14B8A6" stroke-width="5" stroke-linecap="round"/><circle cx="164" cy="82" r="7" fill="#14B8A6"/>
+  <path d="M37 128c-19 13-25 32-12 43 15-6 25-19 34-39" fill="#075BFF"/><path d="M183 128c19 13 25 32 12 43-15-6-25-19-34-39" fill="#075BFF"/>
+  <rect x="75" y="149" width="70" height="43" rx="6" fill="#0B63F6"/><path d="M110 149v43" stroke="#EAF3FF" stroke-width="3"/>
+  <ellipse cx="87" cy="198" rx="14" ry="7" fill="#F97316"/><ellipse cx="133" cy="198" rx="14" ry="7" fill="#F97316"/>
+  <path d="M31 31c10 13 1 20 13 33 11-8 19-25-2-45 2 14-8 13-11 12Z" fill="url(#f)"/><path d="M183 26c14 13 3 24 16 35 13-11 16-28-3-45 1 13-8 15-13 10Z" fill="url(#f)"/>
+</svg>

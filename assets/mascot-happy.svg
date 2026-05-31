@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" role="img" aria-label="Happy owl mascot">
+  <defs><linearGradient id="g" x1="25" y1="35" x2="190" y2="190" gradientUnits="userSpaceOnUse"><stop stop-color="#0B63F6"/><stop offset="1" stop-color="#14B8A6"/></linearGradient></defs>
+  <ellipse cx="110" cy="126" rx="72" ry="76" fill="url(#g)"/>
+  <ellipse cx="110" cy="137" rx="45" ry="50" fill="#F8FBFF"/>
+  <path d="M48 83c14-28 31-43 53-40l-18 35c-11 3-21 6-35 5Zm124 0c-14-28-31-43-53-40l18 35c11 3 21 6 35 5Z" fill="#0A3A88"/>
+  <circle cx="83" cy="107" r="28" fill="#fff"/><circle cx="137" cy="107" r="28" fill="#fff"/>
+  <circle cx="83" cy="107" r="17" fill="#0B1B3A"/><circle cx="137" cy="107" r="17" fill="#0B1B3A"/>
+  <circle cx="88" cy="101" r="6" fill="#fff"/><circle cx="142" cy="101" r="6" fill="#fff"/>
+  <path d="M110 121l14 10-14 12-14-12 14-10Z" fill="#F97316"/>
+  <path d="M73 94c12-9 24-9 34 0M113 94c12-9 24-9 34 0" fill="none" stroke="#0B1B3A" stroke-width="7" stroke-linecap="round"/>
+  <rect x="74" y="46" width="72" height="17" rx="3" fill="#0B1B3A" transform="rotate(-9 110 54)"/><path d="M112 18l56 22-55 20-58-20 57-22Z" fill="#0B1B3A"/><path d="M164 42v38" stroke="#14B8A6" stroke-width="5" stroke-linecap="round"/><circle cx="164" cy="82" r="7" fill="#14B8A6"/>
+  <path d="M55 142c-20 8-27 23-19 34 13-5 23-15 31-29" fill="#075BFF"/><path d="M165 142c20 8 27 23 19 34-13-5-23-15-31-29" fill="#075BFF"/>
+  <rect x="75" y="149" width="70" height="43" rx="6" fill="#0B63F6"/><path d="M110 149v43" stroke="#EAF3FF" stroke-width="3"/>
+  <ellipse cx="87" cy="198" rx="14" ry="7" fill="#F97316"/><ellipse cx="133" cy="198" rx="14" ry="7" fill="#F97316"/>
+  <path d="M180 21h8m-4-4v8M37 28h7m-3.5-3.5v7" stroke="#7C3AED" stroke-width="4" stroke-linecap="round"/>
+</svg>
