@@ -15,6 +15,7 @@ init();
 document.getElementById("startReview").addEventListener("click", startManualReviewOnPage);
 document.getElementById("closeReview").addEventListener("click", closeReviewModal);
 document.getElementById("exportWords").addEventListener("click", exportWordsCsv);
+document.getElementById("aboutToggle").addEventListener("click", toggleAboutPanel);
 document.getElementById("dailyGoal").addEventListener("change", saveSettingsFromUI);
 document.getElementById("dailyGoal").addEventListener("keydown", (e) => { if (e.key === "Enter") saveSettingsFromUI(); });
 document.getElementById("browseReviewEnabled").addEventListener("change", saveSettingsFromUI);
@@ -385,6 +386,14 @@ function syncIntervalFromRange() {
 function applyVisualTheme(theme = "promo") {
   document.body.classList.toggle("theme-classic", theme === "classic");
   document.body.classList.toggle("theme-promo", theme !== "classic");
+}
+
+function toggleAboutPanel() {
+  const panel = document.getElementById("aboutPanel");
+  const button = document.getElementById("aboutToggle");
+  const isHidden = panel.classList.toggle("hidden");
+  button.setAttribute("aria-expanded", String(!isHidden));
+  button.textContent = isHidden ? "About us" : "Hide about";
 }
 
 function renderLanguageOptions() {

@@ -62,6 +62,13 @@ input:focus, select:focus { border-color:#60a5fa; box-shadow:0 0 0 3px rgba(96,1
 .progress-wrap { width:100%; height:8px; border-radius:999px; background:rgba(255,255,255,.08); overflow:hidden; margin-top:8px; }
 .progress { height:100%; border-radius:999px; background:linear-gradient(90deg,#22c55e,#60a5fa); width:0%; transition:width .2s ease; }
 .export-card { display:flex; align-items:center; justify-content:space-between; gap:12px; background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.045)); border:1px solid rgba(255,255,255,.1); border-radius:20px; padding:13px; margin:10px 0; box-shadow:0 16px 40px rgba(0,0,0,.15); }
+.about-card { background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.045)); border:1px solid rgba(255,255,255,.1); border-radius:20px; padding:13px; margin:10px 0; box-shadow:0 16px 40px rgba(0,0,0,.15); }
+.about-toggle { width:100%; margin:0; }
+.about-panel { margin-top:10px; padding:12px; border-radius:16px; background:rgba(2,6,23,.28); border:1px solid rgba(255,255,255,.08); }
+.about-link-row { display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
+.about-link-row span { font-weight:900; color:#bfdbfe; }
+.about-link-row a { color:#93c5fd; font-weight:800; text-decoration:none; word-break:break-word; }
+.about-link-row a:hover { text-decoration:underline; }
 .review-modal { position:fixed; inset:0; z-index:9999; background:rgba(2,6,23,.72); backdrop-filter:blur(10px); display:flex; align-items:center; justify-content:center; padding:16px; }
 .review-modal.hidden { display:none; }
 .review-modal-card { width:min(398px, calc(100vw - 24px)); max-height:92vh; overflow:auto; background:radial-gradient(circle at 15% 0%, #1d4ed8 0, #111827 34%, #020617 100%); border:1px solid rgba(255,255,255,.14); border-radius:26px; padding:15px; box-shadow:0 30px 90px rgba(0,0,0,.45); }
@@ -164,6 +171,19 @@ body.theme-promo .review-modal-card {
   box-shadow:0 30px 80px rgba(37,99,235,.20);
   color:#0f172a;
 }
+body.theme-promo .about-card {
+  background:rgba(255,255,255,.86);
+  border:1px solid rgba(37,99,235,.12);
+  box-shadow:0 18px 40px rgba(15,23,42,.08);
+  color:#0f172a;
+}
+body.theme-promo .about-panel {
+  background:#ffffff;
+  border:1px solid rgba(37,99,235,.12);
+  color:#0f172a;
+}
+body.theme-promo .about-link-row span { color:#0b63f6; }
+body.theme-promo .about-link-row a { color:#0b63f6; }
 body.theme-promo .modal-head { border-bottom:1px solid rgba(37,99,235,.10); }
 body.theme-promo .modal-card-content,
 body.theme-promo .review-extra,

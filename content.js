@@ -99,10 +99,7 @@ async function showToolbar(text) {
   document.documentElement.appendChild(box);
   startContentBlinkLoop();
 
-  const top = Math.max(12, (rect ? rect.bottom + window.scrollY + 8 : window.scrollY + 80));
-  const left = Math.min(window.innerWidth - 390, Math.max(12, rect ? rect.left + window.scrollX : 20));
-  box.style.top = `${top}px`;
-  box.style.left = `${left}px`;
+  positionToolbar(box, rect);
 
   box.querySelector(".vla-close").onclick = removeToolbar;
   box.querySelector('[data-action="dictionary"]').onclick = () => loadDictionary(text);
@@ -113,6 +110,56 @@ async function showToolbar(text) {
 
   bindDismissHandlers("vla-toolbar", removeToolbar);
   loadDictionary(text);
+}
+
+function positionToolbar(box, rect) {
+  const margin = 12;
+  const gap = 10;
+  const viewportWidth = window.innerWidth;
+  const viewportHeight = window.innerHeight;
+  const estimatedWidth = 380;
+
+  box.style.position = "fixed";
+  box.style.maxHeight = `${Math.max(220, viewportHeight - margin * 2)}px`;
+  box.style.width = `${Math.min(estimatedWidth, Math.max(300, viewportWidth - margin * 2))}px`;
+  box.style.left = "auto";
+  box.style.right = "auto";
+  box.style.top = "-9999px";
+  box.style.visibility = "hidden";
+
+  requestAnimationFrame(() => {
+    const boxRect = box.getBoundingClientRect();
+    const boxWidth = boxRect.width || Math.min(estimatedWidth, viewportWidth - margin * 2);
+    const boxHeight = boxRect.height || 320;
+
+    const selectionLeft = rect ? rect.left : viewportWidth / 2 - boxWidth / 2;
+    const selectionRight = rect ? rect.right : selectionLeft + boxWidth;
+    const availableBelow = rect ? viewportHeight - rect.bottom - gap : viewportHeight - margin * 2;
+    const availableAbove = rect ? rect.top - gap : viewportHeight - margin * 2;
+
+    let top;
+    if (rect && availableBelow < boxHeight && availableAbove > availableBelow) {
+      top = Math.max(margin, rect.top - boxHeight - gap);
+    } else if (rect) {
+      top = Math.min(viewportHeight - boxHeight - margin, rect.bottom + gap);
+    } else {
+      top = Math.max(margin, Math.min(viewportHeight - boxHeight - margin, 80));
+    }
+
+    let left = rect ? rect.left : (viewportWidth - boxWidth) / 2;
+    left = Math.max(margin, Math.min(viewportWidth - boxWidth - margin, left));
+
+    if (rect && selectionRight > viewportWidth - margin) {
+      left = Math.max(margin, viewportWidth - boxWidth - margin);
+    }
+    if (rect && selectionLeft < margin) {
+      left = margin;
+    }
+
+    box.style.top = `${Math.max(margin, top)}px`;
+    box.style.left = `${Math.max(margin, left)}px`;
+    box.style.visibility = "visible";
+  });
 }
 
 function bindDismissHandlers(elementId, closeFn) {
